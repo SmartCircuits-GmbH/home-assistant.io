@@ -52,11 +52,14 @@ The WattWächter Plus provides sensors that are based on your smart meter's repo
 - **Total feed-in (kWh)**: Total energy exported (fed back into the grid).
 - **Consumption tariff 1 / 2 (kWh)**: Energy consumption per tariff, if your meter supports dual tariffs.
 - **Feed-in tariff 1 / 2 (kWh)**: Energy feed-in per tariff.
+- **Absolute energy (kWh)**: Total energy regardless of direction, if reported by your meter.
+- **Reactive energy consumption / feed-in (kvarh)**: Reactive energy totals, if reported by your meter.
 
 ### Power sensors
 
 - **Active power (W)**: Current power being consumed or fed in. Negative values indicate feed-in.
 - **Active power L1 / L2 / L3 (W)**: Active power per phase.
+- **Maximum demand (kW)**: The maximum power demand, if reported by your meter.
 
 ### Voltage and current sensors
 
@@ -70,7 +73,7 @@ The WattWächter Plus provides sensors that are based on your smart meter's repo
 
 ### Additional meter values
 
-Smart meters can report values beyond the well-known ones listed above. The integration creates a sensor for every additional OBIS code your meter reports, deriving the sensor type from the reported unit. Cumulative energy registers are recorded as continuously increasing totals, and device metadata such as the meter's serial number is created as diagnostic entities.
+Smart meters can report values beyond the well-known ones listed above. The integration creates a sensor for every additional OBIS code your meter reports, deriving the sensor type from the reported unit. Cumulative energy registers are recorded as continuously increasing totals, and device metadata such as the meter's serial number is created as diagnostic entities. These additional sensors are disabled by default; enable the ones you need from the device page.
 
 ### Diagnostic sensors
 
